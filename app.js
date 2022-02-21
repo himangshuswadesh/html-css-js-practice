@@ -22,3 +22,22 @@ function add(a, b) {
 
 add(2, 5);
 add(2, 15);
+
+// sum function
+function sumAdder(...args) {
+	let sum = 0;
+
+	for (let i = 0; i < args.length; i++) {
+		sum += args[i];
+	}
+	return sum;
+}
+
+let arraynumber = [];
+for (let i = 1; i < 51; i++) {
+	arraynumber.push(i);
+}
+
+console.log(arraynumber);
+console.log('sumAdder', sumAdder(1, 2, 3, 4));
+console.log('sumAdder', sumAdder(...arraynumber));
